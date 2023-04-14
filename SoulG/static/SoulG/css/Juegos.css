@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 html{
     font-family: 'Montserrat', sans-serif;
 }
@@ -26,3 +27,33 @@ text-decoration: none;
     background: rgb(181, 140, 219);
 }
 
+=======
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: white; 
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center; 
+}
+.titulo{
+    font-family:sans-serif;  
+    color:blueviolet;
+    text-align: center;   
+}
+
+.nav-enlace{
+font-family:sans-serif;
+display:  inline-block;
+background: blueviolet;
+padding: 10px 30px;
+color:greenyellow;
+text-decoration: none;
+}
+
+.nav-enlace:hover{
+    background: rgb(181, 140, 219);
+}
+
+>>>>>>> Stashed changes
