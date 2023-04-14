@@ -1,0 +1,85 @@
+html{
+    font-family: sans-serif;
+}
+body{
+    background-color: white;  
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+.titulo{
+    font-family:sans-serif;  
+    color:blueviolet;
+    text-align: center;    
+}
+.nav-enlace{
+font-family:sans-serif;
+display:  inline-flex;
+justify-content: space-around;
+background: blueviolet;
+padding: 10px 30px;
+color:greenyellow;
+
+text-decoration: none;
+}
+
+.nav-enlace:hover{
+    background: rgb(181, 140, 219);
+}
+
+.diablo {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 0px;
+
+  }
+  
+  .diablo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .diablo:hover img {
+    transform: scale(1.2);
+  }
+
+  .ac {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 0px;
+
+  }
+  
+  .ac img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .ac:hover img {
+    transform: scale(1.2);
+  }
+
+    .banner {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 50px;
+
+  }
+  
+  .banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .banner:hover img {
+    transform: scale(1.2);
+  }
