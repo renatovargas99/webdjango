@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <TITLE>SoulGames</TITLE>
+    {% load static %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/iniciosesion.css">
-    <script src="js/recontraseña.js"></script>
+    <link rel="stylesheet" href="{% static 'SoulG/css/iniciosesion.css'%}">
+    <script src="{% static 'SoulG/js/recontraseña.js'%}"></script>
     <div>
         <p>
-            <center><a href="Index.html" class="titulo"><img src="imagenes/sg.png" width="100gtpx" height="100px" alt="Logo ps">  </a></center> 
+            <center><a href="{% url 'index' %}" class="titulo">
+                <img src="{% static 'SoulG/img/sg.png'%}" width="100gtpx" height="100px" alt="Logo ps"> 
+            </a></center> 
         </p>    
     </div>
     <div>
-        <a href="Aventura.html" class="nav-enlace">Aventura</a>
-        <a href="Combate.html"class="nav-enlace">Combate</a>
-        <a href="deporte.html"class="nav-enlace">Deporte</a>
-        <a href="Rol.html"class="nav-enlace">Rol</a>
-        <a href="Terror.html"class="nav-enlace">Terror</a>
-        <a href="Registro.html"class="nav-enlace">Registro</a>
-        <a href="Iniciosesion.html"class=nav-enlace>Inicio Sesion</a>
-        <a href="Carrito.html"class=nav-enlace>Carrito</a>
+        <a href="{% url 'Aventura' %}" class="nav-enlace">Aventura</a>
+        <a href="{% url 'Combate' %}"class="nav-enlace">Combate</a>
+        <a href="{% url 'Deporte' %}"class="nav-enlace">Deporte</a>
+        <a href="{% url 'Rol' %}"class="nav-enlace">Rol</a>
+        <a href="{% url 'Terror' %}"class="nav-enlace">Terror</a>
+        <a href="{% url 'Registro' %}"class="nav-enlace">Registro</a>
+        <a href="{% url 'Inicio_Session' %}"class=nav-enlace>Inicio Sesion</a>
+        <a href="{% url 'Carrito' %}"class=nav-enlace>Carrito</a>
         
     </div>
 
