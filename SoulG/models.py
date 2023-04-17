@@ -13,7 +13,6 @@ class Juego(models.Model):
     nombrejuego = models.CharField(max_length= 20, verbose_name='Nombre videojuego')
     tipojuego = models.CharField(max_length=20, verbose_name= 'Tipo de juego')
     plataformajuego= models.CharField(max_length=50, verbose_name= 'Plataforma juego')
-    Categoria = models.ForeignKey(Categoria, on_delate=models.CASCADE)
 
     def __str__(self):
         return self.nombrejuego, self.id_juego
@@ -24,7 +23,7 @@ class Juego(models.Model):
     
 class Cliente(models.Model):
     id_cliente=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id cliente')
-    nombre_cliente = models.CharField(primary_key=True, max_length= 20, verbose_name='Nombre cliente')
+    nombre_cliente = models.CharField(max_length= 20, verbose_name='Nombre cliente')
     rut_cliente = models.CharField(max_length=20, verbose_name= 'Rut')
     correo_cliente= models.CharField(max_length=50, verbose_name= 'Correo Cliente')
 
@@ -37,7 +36,7 @@ class Cliente(models.Model):
 
 class Trabajador(models.Model):
     id_trabajador=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id cliente')
-    nombre_trabajador = models.CharField(primary_key=True, max_length= 20, verbose_name='Nombre Trabajador')
+    nombre_trabajador = models.CharField(max_length= 20, verbose_name='Nombre Trabajador')
     rut_trabajador = models.CharField(max_length=20, verbose_name= 'Rut')
     correo_trabajador= models.CharField(max_length=50, verbose_name= 'Correo trabajador')
 
@@ -50,7 +49,7 @@ class Trabajador(models.Model):
 
 class Proveedor(models.Model):
     id_proveedor=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id proveedor')
-    nombre_proveedor = models.CharField(primary_key=True, max_length= 20, verbose_name='Nombre proveedor')
+    nombre_proveedor = models.CharField(max_length= 20, verbose_name='Nombre proveedor')
     rut_proveedor = models.CharField(max_length=20, verbose_name= 'Rut proveedor')
     factura= models.CharField(max_length=50, verbose_name= 'Factura')
 
@@ -63,7 +62,7 @@ class Proveedor(models.Model):
 
 class Compra(models.Model):
     id_compra=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id Compra')
-    compra_valor = models.CharField(primary_key=True, max_length= 20, verbose_name=' Valor compra')
+    compra_valor = models.CharField(max_length= 20, verbose_name=' Valor compra')
     id_cliente = models.CharField(max_length=20, verbose_name= 'Id cliente')
     id_videojuego= models.CharField(max_length=50, verbose_name= 'Id videojuego')
 
@@ -76,7 +75,7 @@ class Compra(models.Model):
 
 class Reclamo (models.Model):
     id_reclamo=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id Reclamo')
-    id_usuario = models.CharField(primary_key=True, max_length= 20, verbose_name=' Id usuario')
+    id_usuario = models.CharField(max_length= 20, verbose_name=' Id usuario')
     descripcion = models.TextField(max_length=20, verbose_name= 'descripcion')
 
     def __str__(self):
