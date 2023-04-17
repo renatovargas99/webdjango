@@ -35,7 +35,7 @@ class Cliente(models.Model):
         super(). delete()
 
 class Trabajador(models.Model):
-    id_trabajador=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id cliente')
+    id_trabajador=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id Trabajador')
     nombre_trabajador = models.CharField(max_length= 20, verbose_name='Nombre Trabajador')
     rut_trabajador = models.CharField(max_length=20, verbose_name= 'Rut')
     correo_trabajador= models.CharField(max_length=50, verbose_name= 'Correo trabajador')
@@ -75,7 +75,7 @@ class Compra(models.Model):
 
 class Reclamo (models.Model):
     id_reclamo=models.AutoField (primary_key=True, max_length=20, verbose_name= 'Id Reclamo')
-    id_usuario = models.CharField(max_length= 20, verbose_name=' Id usuario')
+    id_usuario = models.CharField(max_length= 20, verbose_name='Id usuario')
     descripcion = models.TextField(max_length=20, verbose_name= 'descripcion')
 
     def __str__(self):
