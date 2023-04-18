@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Lista de Juegos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Plataforma</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for Juego in Juegos %}
+        <tr>
+          <td>{{ Juego.id }}</td>
+          <td>{{ Juego.nombre }}</td>
+          <td>{{ Juego.tipo }}</td>
+          <td>{{ Juego.plataforma }}</td>
+          <td><a href="{% url 'Juego_editar' Juego.id %}">Editar</a></td>
+          <td><a href="{% url 'Juego_eliminar' Juego.id %}">Eliminar</a></td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No hay Juegos registrados.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'Juego_nuevo' %}">Agregar Juego</a>
+{% endblock %}

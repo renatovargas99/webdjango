@@ -1,6 +1,44 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, redirect, render
+from .models import Juego
+from .forms import JuegoForm
 
 # Create your views here.
+
+
+#Lista de juegos
+def Juego_lista(request):
+    Juego=Juego.object.all()
+    return render(request, 'Juego_lista.html', {'Juego':Juego})
+#Vista para la creacion
+def Juego_nuevo(request):
+    if request.method == "POST":
+        formulario = JuegoForm(request.POST)
+        if formulario.is_valid():
+            Juego = formulario.save(commit=False)
+            Juego.save()
+            return redirect('Juego_lista')
+    else:
+        formulario = JuegoForm()
+    return render(request, 'Juego_editar.html', {'formulario': formulario})
+#crear una vista para la actualizacion
+def Juego_editar(request, id):
+    Juego = get_object_or_404(Juego, id)
+    if request.method == "POST":
+        formulario = JuegoForm(request.POST, instance=Juego)
+        if formulario.is_valid():
+            Juego = formulario.save(commit=False)
+            Juego.save()
+            return redirect('Juego_lista')
+    else:
+        formulario = JuegoForm(instance=Juego)
+    return render(request, 'Juego_editar.html', {'formulario': formulario})
+#crear una vista para la eliminacion
+def Juego_eliminar(request, pk):
+    Juego = get_object_or_404(Juego, pk=pk)
+    Juego.delete()
+    return redirect('Juego_lista')
+
+
 def index(request):
     return render(request, 'SoulG/index.html')
 

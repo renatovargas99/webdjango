@@ -1,9 +1,17 @@
+from django.http import HttpResponse
 from django.urls import path
 from .views import (index, Aventura, Combate, Deporte , Rol , Terror , Registro , Inicio_Session , Carrito , AcM , Adinfinitum, Diablo, Easport, RE4, RecContrasena, 
-                   Session, SF6, Starfield, SWfw, WWE )
+                   Session, SF6, Starfield, SWfw, WWE, Juego_lista, Juego_editar)
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
+def home(request):
+    return HttpResponse("invalido")
 
 urlpatterns = [
+    path('Juego_editar/<id>', Juego_editar, name='Juego_editar'),
+    path('Juego_lista', Juego_lista, name='Juego_lista'),
     path('', index, name='index'),
     path('Aventura', Aventura, name='Aventura'),
     path('Combate', Combate, name='Combate'),

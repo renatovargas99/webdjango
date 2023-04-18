@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if formulario.instance.id %}
+    <h1>Editar Juego</h1>
+  {% else %}
+    <h1>Agregar Juego</h1>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <button type="submit">Guardar</button>
+  </form>
+{% endblock %}
