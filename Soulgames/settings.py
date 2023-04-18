@@ -78,6 +78,8 @@ DATABASES = {
     'default': {
         #  'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
+        #SoulGAdmin
+        #soul2023
           'ENGINE': 'django.db.backends.oracle',
           'NAME':'127.0.0.1:1521/ORCL ',
           'USER': 'C##SoulG',
