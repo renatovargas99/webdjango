@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Mapa" id="587BB3B3-7354-2593-FCB0-24FCFD7C955F" version="3.5">
+<createdBy>evoxg</createdBy>
+<createdTime>2023-04-17 23:54:01 UTC</createdTime>
+<ownerDesignName>Mapa</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>587BB3B3-7354-2593-FCB0-24FCFD7C955F</designId>
+</OSDM_Design>
